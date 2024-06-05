@@ -14,6 +14,13 @@ public class QuestionsChangeScript : MonoBehaviour
     public Text Choose4;
     public Button Next;
 
+    public Toggle toggle1;
+    public Toggle toggle2;
+    public Toggle toggle3;
+    public Toggle toggle4;
+    private bool[] CheckedAnswers = new bool[15];
+    private bool[] CorrectCheckedAnswers = new bool[15];
+
     private int Question = 1;
     private string DisplayedNumber = "1";
     private string[] Question_list = { "quest1","quest2"};
@@ -21,7 +28,12 @@ public class QuestionsChangeScript : MonoBehaviour
 
     private void Start()
     {
+        toggle1 = toggle1.GetComponent<Toggle>();
+        toggle2 = toggle1.GetComponent<Toggle>();
+        toggle3 = toggle1.GetComponent<Toggle>();
+        toggle4 = toggle1.GetComponent<Toggle>();
         Number.text = Question.ToString();
+
     }
 
     public void ButtonClicked(int number)
@@ -39,6 +51,21 @@ public class QuestionsChangeScript : MonoBehaviour
 
     public void NextButton()
     {
+        switch (Question)
+        {
+            case 0:
+                if (toggle2.GetComponent<Toggle>().isOn)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+        }
+        CheckedAnswers[Question] = true;
         Question += 1;
         ButtonClicked(Question);
     }
