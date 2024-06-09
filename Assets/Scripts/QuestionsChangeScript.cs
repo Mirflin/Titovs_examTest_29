@@ -21,10 +21,10 @@ public class QuestionsChangeScript : MonoBehaviour
     private bool[] CheckedAnswers = new bool[15];
     private bool[] CorrectCheckedAnswers = new bool[15];
 
-    private int Question = 1;
+    private int Question = 0;
     private string DisplayedNumber = "1";
-    private string[] Question_list = { "quest1","quest2"};
-    private string[,] Question_anwers = new string[2, 4] { { "1", "2", "3", "4" }, { "da","net","danet","netda"} };
+    private string[] Question_list = { "Where do we use C#?","What year does C# released?","How many bool data type takes?", "What variable type stores variable addreses?","What data type is used for numbers?","Where is pointers stored in RAM memory?","What is main unity object?"};
+    private string[,] Question_anwers = new string[7, 4] { { "GameDev", "Drivers", "WEB", "Cybersecurity" }, { "2004","2001","2000","1996"},{ "1 bit","1 byte","2 bit","4 bytes" },{ "int","string","pointer","char"},{ "string","int","byte","bool"},{" variables memory","static memory","function memory","pointer memory" },{ "Text","Image","Transform","GameObject"} };
 
     private void Start()
     {
@@ -32,13 +32,12 @@ public class QuestionsChangeScript : MonoBehaviour
         toggle2 = toggle1.GetComponent<Toggle>();
         toggle3 = toggle1.GetComponent<Toggle>();
         toggle4 = toggle1.GetComponent<Toggle>();
-        Number.text = Question.ToString();
+        
 
     }
 
     public void ButtonClicked(int number)
     {
-        Question = number-1;
         DisplayedNumber = number.ToString();
         GameObject child = Buttons.transform.GetChild(Question).gameObject;
         QuestionDes.text = (string) Question_list[Question];
@@ -47,6 +46,11 @@ public class QuestionsChangeScript : MonoBehaviour
         Choose2.text = Question_anwers[Question,1];
         Choose3.text = Question_anwers[Question,2];
         Choose4.text = Question_anwers[Question,3];
+        Debug.Log("Clicked!");
+        toggle1.isOn = false;
+        toggle2.isOn = false;
+        toggle3.isOn = false;
+        toggle4.isOn = false;
     }
 
     public void NextButton()
