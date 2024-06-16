@@ -15,6 +15,8 @@ public class QuestionsChangeScript : MonoBehaviour
     public Text Choose4;
     public Button Next;
 
+    
+
     public Toggle toggle1;
     public Toggle toggle2;
     public Toggle toggle3;
@@ -38,6 +40,12 @@ public class QuestionsChangeScript : MonoBehaviour
 
     public Button nextB;
 
+
+    public GameObject QuestionObj;
+    public GameObject ResultObj;
+
+    public Text Result;
+
     private bool[] CheckedAnswers = new bool[15];
     private bool[] CorrectCheckedAnswers = new bool[15];
 
@@ -46,12 +54,7 @@ public class QuestionsChangeScript : MonoBehaviour
     private string[] Question_list = { "Where do we use C#?","What year does C# released?","How many bool data type takes?", "What variable type stores variable addreses?","What data type is used for numbers?","Where is pointers stored in RAM memory?","What is main unity object?"};
     private string[,] Question_anwers = new string[7, 4] { { "GameDev", "Drivers", "WEB", "Cybersecurity" }, { "2004","2001","2000","1996"},{ "1 bit","1 byte","2 bit","4 bytes" },{ "int","string","pointer","char"},{ "string","int","byte","bool"},{" variables memory","static memory","function memory","pointer memory" },{ "Text","Image","Transform","GameObject"} };
 
-    private void Start()
-    {
-       
-        
 
-    }
 
     public void ButtonClicked(int number)
     {
@@ -108,7 +111,18 @@ public class QuestionsChangeScript : MonoBehaviour
     {
         if (Question == 13)
         {
-            SceneManager.LoadScene("ResultsScene", LoadSceneMode.Single);
+            QuestionObj.SetActive(false);
+            int CorrectCounter = 0;
+            for(int i = 0;i <= 14; i++)
+            {
+                if(CorrectCheckedAnswers[i] == true)
+                {
+                    CorrectCounter++;
+                }
+            }
+            Result.text = "Result: 15/"+ CorrectCounter;
+            ResultObj.SetActive(true);
+
         }
         else
         {
