@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuestionsChangeScript : MonoBehaviour
 {
@@ -71,7 +72,7 @@ public class QuestionsChangeScript : MonoBehaviour
 
     public void NextButton()
     {
- 
+        
         var colors = nextB.GetComponent<Button>().colors;
         colors.normalColor = Color.green;
         colors.highlightedColor = Color.green;
@@ -98,8 +99,21 @@ public class QuestionsChangeScript : MonoBehaviour
                 break;
         }
         CheckedAnswers[Question] = true;
+        Submit();
         Question += 1;
         ButtonClicked(Question);
+    }
+
+    public void Submit()
+    {
+        if (Question == 13)
+        {
+            SceneManager.LoadScene("ResultsScene", LoadSceneMode.Single);
+        }
+        else
+        {
+            Debug.Log("Question not 15/ " + Question);
+        }
     }
 
 
