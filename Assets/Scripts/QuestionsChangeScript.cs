@@ -18,6 +18,25 @@ public class QuestionsChangeScript : MonoBehaviour
     public Toggle toggle2;
     public Toggle toggle3;
     public Toggle toggle4;
+
+    public Button Button1;
+    public Button Button2;
+    public Button Button3;
+    public Button Button4;
+    public Button Button5;
+    public Button Button6;
+    public Button Button7;
+    public Button Button8;
+    public Button Button9;
+    public Button Button10;
+    public Button Button11;
+    public Button Button12;
+    public Button Button13;
+    public Button Button14;
+    public Button Button15;
+
+    public Button nextB;
+
     private bool[] CheckedAnswers = new bool[15];
     private bool[] CorrectCheckedAnswers = new bool[15];
 
@@ -28,10 +47,7 @@ public class QuestionsChangeScript : MonoBehaviour
 
     private void Start()
     {
-        toggle1 = toggle1.GetComponent<Toggle>();
-        toggle2 = toggle1.GetComponent<Toggle>();
-        toggle3 = toggle1.GetComponent<Toggle>();
-        toggle4 = toggle1.GetComponent<Toggle>();
+       
         
 
     }
@@ -39,6 +55,7 @@ public class QuestionsChangeScript : MonoBehaviour
     public void ButtonClicked(int number)
     {
         DisplayedNumber = number.ToString();
+        Question = number;
         GameObject child = Buttons.transform.GetChild(Question).gameObject;
         QuestionDes.text = (string) Question_list[Question];
         Number.text = (Question+1).ToString();
@@ -46,7 +63,6 @@ public class QuestionsChangeScript : MonoBehaviour
         Choose2.text = Question_anwers[Question,1];
         Choose3.text = Question_anwers[Question,2];
         Choose4.text = Question_anwers[Question,3];
-        Debug.Log("Clicked!");
         toggle1.isOn = false;
         toggle2.isOn = false;
         toggle3.isOn = false;
@@ -55,16 +71,28 @@ public class QuestionsChangeScript : MonoBehaviour
 
     public void NextButton()
     {
+ 
+        var colors = nextB.GetComponent<Button>().colors;
+        colors.normalColor = Color.green;
+        colors.highlightedColor = Color.green;
+        colors.pressedColor = Color.green;
+        colors.selectedColor = Color.green;
+        colors.disabledColor = Color.green;
+        GameObject child = Buttons.transform.GetChild(Question).gameObject;
+        child.GetComponent<Button>().colors = colors;
+
+
         switch (Question)
         {
             case 0:
-                if (toggle2.GetComponent<Toggle>().isOn)
+                if (toggle2.GetComponent<Toggle>().isOn && toggle1.GetComponent<Toggle>().isOn == false && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn == false)
                 {
                     Debug.Log(true);
                     CorrectCheckedAnswers[Question] = true;
                 }
                 else
                 {
+                    Debug.Log(false);
                     CorrectCheckedAnswers[Question] = false;
                 }
                 break;

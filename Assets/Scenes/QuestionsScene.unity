@@ -213,7 +213,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 11
+          m_IntArgument: 12
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1138,7 +1138,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
+          m_IntArgument: 13
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1804,7 +1804,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2275,6 +2275,22 @@ MonoBehaviour:
   toggle2: {fileID: 365594739}
   toggle3: {fileID: 1075889018}
   toggle4: {fileID: 1355677993}
+  Button1: {fileID: 65572642}
+  Button2: {fileID: 1395002373}
+  Button3: {fileID: 1123656496}
+  Button4: {fileID: 431272153}
+  Button5: {fileID: 372340443}
+  Button6: {fileID: 789195573}
+  Button7: {fileID: 1295891525}
+  Button8: {fileID: 1819672064}
+  Button9: {fileID: 1281131233}
+  Button10: {fileID: 1508041010}
+  Button11: {fileID: 967289088}
+  Button12: {fileID: 3220898}
+  Button13: {fileID: 288302868}
+  Button14: {fileID: 1876735859}
+  Button15: {fileID: 1632003886}
+  nextB: {fileID: 115933244}
 --- !u!1 &789195571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,7 +2381,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5012,7 +5028,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 14
+          m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5823,7 +5839,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 13
+          m_IntArgument: 14
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

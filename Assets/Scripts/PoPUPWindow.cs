@@ -8,6 +8,7 @@ public class PoPUPWindow : MonoBehaviour
 {
     public GameObject Window;
     
+    
     private void OnMouseEnter()
     {
         Window.SetActive(true);
