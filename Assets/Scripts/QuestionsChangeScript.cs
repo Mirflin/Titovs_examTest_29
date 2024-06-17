@@ -51,8 +51,8 @@ public class QuestionsChangeScript : MonoBehaviour
 
     private int Question = 0;
     private string DisplayedNumber = "1";
-    private string[] Question_list = { "Where do we use C#?","What year does C# released?","How many bool data type takes?", "What variable type stores variable addreses?","What data type is used for numbers?","Where is pointers stored in RAM memory?","What is main unity object?"};
-    private string[,] Question_anwers = new string[7, 4] { { "GameDev", "Drivers", "WEB", "Cybersecurity" }, { "2004","2001","2000","1996"},{ "1 bit","1 byte","2 bit","4 bytes" },{ "int","string","pointer","char"},{ "string","int","byte","bool"},{" variables memory","static memory","function memory","pointer memory" },{ "Text","Image","Transform","GameObject"} };
+    private string[] Question_list = { "Where do we use C#?","What year does created first C# version?","How many bool data type takes?", "What variable type stores variable addreses?","What data type is used for numbers?","Where is program pointers stored in RAM memory?", "What happens if the RAM(stack) is overflows?", "What is main unity object?","Unity object for transformation(with additional info)?","Unity object for creating triggers?","What object is used for unity UI elements?","Variable that used for storing large int numbers?","What variable(x,y,z) changes UI object height?" , "Unity object that stores audio.", "Unity object for visualizing elements?"};
+    private string[,] Question_anwers = new string[15, 4] { { "GameDev", "Drivers", "WEB", "Cybersecurity" }, { "2004","2001","2000","1996"},{ "1 bit","1 byte","2 bit","4 bytes" },{ "int","string","pointer","char"},{ "string","int","byte","bool"},{" variables memory","static memory","function memory","pointer memory" },{"StackOverflow error","Stack extends","Deleting first stack element","Nothing" },{ "Text","Image","Transform","GameObject"},{"Transform","Trans","Rect Transform","RTransform"},{"Image","Collider","Panel","BoxCollider" },{"Panel","Audio","Video","Canva" },{"long","int","char","ulong" },{"x","y","z","Y"},{"Image","Button","Audio","AudioSource" },{"Canva","Camera","EventHandler","Display"} };
 
 
 
@@ -89,7 +89,175 @@ public class QuestionsChangeScript : MonoBehaviour
         switch (Question)
         {
             case 0:
-                if (toggle2.GetComponent<Toggle>().isOn && toggle1.GetComponent<Toggle>().isOn == false && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn == false)
+                if (toggle1.GetComponent<Toggle>().isOn && toggle3.GetComponent<Toggle>().isOn && toggle2.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn == false)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 1:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn == false)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 2:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn  && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn == false)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 3:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn == false && toggle3.GetComponent<Toggle>().isOn  && toggle4.GetComponent<Toggle>().isOn == false)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 4:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn && toggle3.GetComponent<Toggle>().isOn && toggle4.GetComponent<Toggle>().isOn == false)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 5:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn == false)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 6:
+                if (toggle1.GetComponent<Toggle>().isOn && toggle2.GetComponent<Toggle>().isOn == false && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn == false)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 7:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn == false && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 8:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn == false && toggle3.GetComponent<Toggle>().isOn && toggle4.GetComponent<Toggle>().isOn == false)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 9:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 10:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn == false && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 11:
+                if (toggle1.GetComponent<Toggle>().isOn && toggle2.GetComponent<Toggle>().isOn == false && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 12:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn == false)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 13:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn == false && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn)
+                {
+                    Debug.Log(true);
+                    CorrectCheckedAnswers[Question] = true;
+                }
+                else
+                {
+                    Debug.Log(false);
+                    CorrectCheckedAnswers[Question] = false;
+                }
+                break;
+            case 14:
+                if (toggle1.GetComponent<Toggle>().isOn == false && toggle2.GetComponent<Toggle>().isOn && toggle3.GetComponent<Toggle>().isOn == false && toggle4.GetComponent<Toggle>().isOn == false)
                 {
                     Debug.Log(true);
                     CorrectCheckedAnswers[Question] = true;
@@ -109,7 +277,16 @@ public class QuestionsChangeScript : MonoBehaviour
 
     public void Submit()
     {
-        if (Question == 13)
+        int AnsCheck = 0;
+        for(int i = 0; i <= 14; i++)
+        {
+            if(CheckedAnswers[i] == true)
+            {
+                AnsCheck++;
+            }
+        }
+
+        if (Question == 14 && AnsCheck == 15 || AnsCheck == 15)
         {
             QuestionObj.SetActive(false);
             int CorrectCounter = 0;
