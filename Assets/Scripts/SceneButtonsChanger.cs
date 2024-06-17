@@ -10,9 +10,14 @@ public class SceneButtonsChanger : MonoBehaviour
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
+    public void StartB()
+    {
+        SceneManager.LoadScene("QuestionsScene");
+    }
     public void Quit()
     {
-        Application.Quit();
+	     Application.Quit();
+
     }
 
 

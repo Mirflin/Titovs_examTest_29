@@ -297,7 +297,7 @@ public class QuestionsChangeScript : MonoBehaviour
                     CorrectCounter++;
                 }
             }
-            Result.text = "Result: 15/"+ CorrectCounter;
+            Result.text = "You have "+ CorrectCounter+ " out of 15 correct answers!";
             ResultObj.SetActive(true);
 
         }
